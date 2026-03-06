@@ -29,23 +29,35 @@ public class Calculadora {
 
     //Realiza la operación
     public void realizarOperacion() {
-        switch (operacion) {
-            case "+":
-                suma();
-                break;
-            case "-":
-                resta();
-                break;
-            case "*":
-                multiplicacion();
-                break;
-            case "/":
-                division();
-                break;
-            default:
-                System.out.println("Operación no válida");
-        }
+    switch (operacion) {
+        case "+":
+            suma();
+            break;
+        case "-":
+            resta();
+            break;
+        case "*":
+            multiplicacion();
+            break;
+        case "/":
+            division();
+            break;
+        case "%":
+            modulo();
+            break;
+        default:
+            System.out.println("Operación no válida");
     }
+}
+
+private void modulo() {
+    if (numero2 == 0) {
+        System.out.println("Error: módulo por cero");
+        resultado = 0;
+    } else {
+        resultado = numero1 % numero2;
+    }
+}
 
     private void suma() {
         resultado = numero1 + numero2;
